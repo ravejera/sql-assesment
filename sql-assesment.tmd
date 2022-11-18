@@ -1,0 +1,27 @@
+CREATE TABLE Employees (
+    CustomerID PRIMARY KEY IDENTITY,
+    CustomerName VARCHAR (50),
+    ContactName VARCHAR (50),
+    Address VARCHAR (50),
+    City VARCHAR (50),
+    PostalCode INT,
+    Country VARCHAR
+
+)
+
+--INSERTING 
+
+INSERT INTO Employees ( CustomerName, ContactName, Address, City, PostalCode, Country ) 
+        VALUE ('Gerald juma', 'ravera', 'Albania street', 'nyc', '13481', 'USA'),
+              ('Terry Akinyi', 'akinyi', 'Mali street', 'Nairobi', '63634', 'Kenya'),
+              ('Evans Kibet', 'vans', 'cilum street', 'togo', '3455', 'South Africa'),
+              ('Philip Kalela', 'filo', 'westside street', 'dar', '64536', 'Tanzania'),
+              ('Mildred Achieng', 'milly', 'tom-mboya street', 'mombasa', '3466', 'Kenya'),
+              ('Rodgers Wanyonyi', 'roggy', 'elro street', 'russ', '65446', 'Russia'),
+              ('Nickdon Kamau', 'nick', 'uhuru street', 'nyeri', '6577', 'Kenya'),
+              ('Samwel Macharia', 'sam', 'ntebe street', 'ug', '87546', 'Uganda')
+
+
+--UPDATING
+
+UPDATE Employees SET Address = 'moi avenue' WHERE ContactName = 'Rodgers Wanyonyi'
