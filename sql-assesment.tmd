@@ -22,6 +22,28 @@ INSERT INTO Employees ( CustomerName, ContactName, Address, City, PostalCode, Co
               ('Samwel Macharia', 'sam', 'ntebe street', 'ug', '87546', 'Uganda')
 
 
---UPDATING
+                ----UPDATING----
 
 UPDATE Employees SET Address = 'moi avenue' WHERE ContactName = 'Rodgers Wanyonyi'
+
+
+
+              ----FETCHING DUPLICATED----
+
+SELECT username, email, COUNT(*)
+FROM users
+GROUP BY username, email
+HAVING COUNT(*) > 1
+
+
+            ----FETCHING ODD ROWS----
+
+SELECT a.*
+FROM Employees
+JOIN (SELECT COUNT(*)
+HAVING count(*) > 1 ) b
+
+
+
+        ----FETCHING THREE COSTOMERS WITH THE SAME COUNTRY----
+SELECT Country(kenya) FROM Employees
